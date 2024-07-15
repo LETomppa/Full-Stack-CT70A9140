@@ -1,0 +1,9 @@
+<div *ngIf="user">
+    <h2 class="page-header">Hello {{user["name"]}}!</h2>
+    <p>You now have access to the best Counter-Strike clips of all time:</p>
+    <ul>
+        <div *ngFor="let link of links">
+            <iframe width="560" height="315" [src]="link.url | safe" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </ul>
+</div>
